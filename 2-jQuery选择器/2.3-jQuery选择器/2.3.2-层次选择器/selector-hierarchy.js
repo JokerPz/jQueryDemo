@@ -17,5 +17,8 @@ $(document).ready(function () {
     // 改变id为two的元素后面的所有<div>同辈元素的背景色
     // $("#two ~ div").css("background","#bbffaa");
     // 上面方法比较少用,因为.nextAll()方法可以进行替代
-    $("#two").nextAll("div").css("background", "#bbffaa");
+    // $("#two").nextAll("div").css("background", "#bbffaa");
+
+    // 拓展，siblings()方法与$("#prev ~ siblings")不一样，$("#prev ~ div")只会选择“prev”之后的同辈元素，siblings()方法与前后位置无关，只要是同辈节点就都能匹配。
+    $("#two").siblings("div").css("background", "bbffaa");
 });
